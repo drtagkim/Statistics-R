@@ -84,8 +84,6 @@ prop.test(x=smokers, n=patients)
 str(sleep)
 sleep[seq(1, 20, 2), ]
 
-t.test(extra ~ group, data=sleep, paired=TRUE)
-
 library(tidyr)
 sleep.wide <- pivot_wider(sleep, names_from=group, values_from=extra)
 sleep.wide
