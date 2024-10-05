@@ -90,4 +90,6 @@ library(tidyr)
 sleep.wide <- pivot_wider(sleep, names_from=group, values_from=extra)
 sleep.wide
 
-t.test(sleep.wide$'1', sleep.wide$'2', paired=TRUE)
+t.test(sleep.wide$`1`, sleep.wide$`2`, paired=TRUE)
+
+t.test(Pair(`1`, `2`) ~ 1, data=sleep.wide)
